@@ -1,7 +1,7 @@
 public class DemoDataType{
     public static void main(String[] args){
         // comment. Wellcome to boootcamp! @*!@asdhk()
-        //asdd Datatype(primitive)
+        //asdd Datatype(8 primitives)
         // int --> integer
         //x, dayofWeek -> varible
         int x = 3;
@@ -12,6 +12,8 @@ public class DemoDataType{
         //varible naming convention
         // caml case: dayOfWeek, y2
 
+
+        //int x=102; cannot declare twice
         //Re-assignment
         x = 101;// re-assign 101 to x ,from right to left
         x = x+10;// right:101 +10, left: assign 111 to x
@@ -25,6 +27,11 @@ public class DemoDataType{
         System.out.println(x);//4
         x = ((x+3)/(6+1))*(x+1);
         
+        //variable declaration
+        int x100;
+        //Value Assignment
+        x100 = 9;
+
         System.out.println(x);//5
         //divide
         int x2= 5/4;
@@ -113,5 +120,12 @@ public class DemoDataType{
         int age =66;
         boolean isElderly = age > 65;// asking if age>65?
         System.out.println(isElderly);
+
+        int age2 = 18;
+        boolean isAdult = age2>=18;
+        System.out.println(isAdult);//true
+
+
+
     }
 }
