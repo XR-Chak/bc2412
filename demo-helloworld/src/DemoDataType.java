@@ -53,9 +53,12 @@ public class DemoDataType{
         //divide by zero
         // int f = 10/0;
         // System.out.println(f); //! error
+        byte test = 123;
+        test = (byte) (test + 9.0);//FORCE TO DOWNCAST IT!!!!!!!!
+        System.out.println("test!!!!!!!!!!!!!!!!!!!! :"+test);
+        
 
-        // 0/10
-        System.out.println(0/10);
+        // 0/10,10/0-> will show error!
 
         //int x5 = 3.0/2;
         //step 1: 3->double,2->int
@@ -87,8 +90,8 @@ public class DemoDataType{
         //long l1 = 2147483648
         //Step 1: declare an int value (not ok!!!!)
         //Step 2: convert an int value to long type
-        long l1 = 2_147_483_648L;// "L" ->declare it is a long value
-
+        long l1 = 2_147_483_648L;// "L" ->declare it is a long value,MUST NEED A "L" inside !!!!!!!!!!!!!!!!
+        long l2 = 1203012391299124L;
         //float->double(double is more accurate than float!!!!!!!!)
         double d1 = 10.2;//10.2 ->double value
         double d2 =10.2d;//10.2d -> double value
