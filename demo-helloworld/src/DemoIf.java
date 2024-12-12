@@ -54,20 +54,75 @@ public class DemoIf {
     }
 
     int score = 75;
+    char gender ='M';
     //score >=90 ,Grade A
-    //score between 80 and 89,grade B
+    //SCORE BETWEEN 85 AND 89 for female ,GRADE T
+    //score between 87 and 89 for male, grade T
+    //score between 80 and 84 for female,grade B
+    //score between 80 and 86 for male, grade B
     //score between 70 and 79,grade C
     //UNDER 70,grade F
     char grade = ' ';
+
     if(score>=90){
       grade = 'A';
-    }else if (score>=80) {
+    }else if ((gender =='M'&&score>=87&&score<=89)||(gender =='F'&&score>=85&&score<=89)) {
+      grade = 'T';
+    }
+    else if ((gender =='M'&&score>=80 && score <=86)||(gender=='F'&&score>=80&&score<=84)) {
       grade = 'B';
-    }else if (score>=70) {
+    }else if (score>=70 && score<=79) {
       grade = 'C';
     }else{
       grade = 'F';
     }
+// Tets cases
+//1.M 90
+//2.F 90
+//3.M 89
+//4.M 87
+//5.M 86
+//6.F 87
+//7.F 86
+//8.F 85
+//9.M 85
+//10.M 79
+//11.F 79 ->
+//12.M 69 ->f
+//13.F 69 ->f
+
+
+
+
+
+    if(gender == 'M'){
+      if(score>=90){
+            grade = 'A';
+          }else if (score>=87&&score<=89) {
+            grade = 'T';
+          }
+          else if (score>=80 && score <=86) {
+            grade = 'B';
+          }else if (score>=70 && score<=79) {
+            grade = 'C';
+          }else{
+            grade = 'F';
+          }
+    }else if(gender=='F'){
+      if(score>=90){
+        grade = 'A';
+      }else if (score>=85&&score<=89) {
+        grade = 'T';
+      }
+      else if (score>=80 && score <=84) {
+        grade = 'B';
+      }else if (score>=70 && score<=79) {
+        grade = 'C';
+      }else{
+        grade = 'F';
+      }
+    }
+    
     System.out.println(grade);
 
 
