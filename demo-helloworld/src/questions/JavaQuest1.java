@@ -28,7 +28,6 @@ public class JavaQuest1 {
     // code here ...
     int second = 42;
     int sum = first+second;
-
     System.out.println("The first one: " + first);
     System.out.println("The second one: " + second);
 
