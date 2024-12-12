@@ -1,3 +1,5 @@
+
+
 public class DemoString {
   public static void main(String[] args){
     char x ='a';
@@ -54,5 +56,26 @@ public class DemoString {
    System.out.println("hello".charAt(2));//l                         
    //System.out.println(emptyString.charAt(0));
 
+   //'c'.charAt()// Primitive has no method(tool)
+
+
+   //isEmpty()
+   String s5 = "abc";
+   boolean isEmpty = s5.length()==0;
+   System.out.println(isEmpty);
+   System.out.println(s5.isEmpty());
+
+   if (!s5.isEmpty()) {
+    
+   }
+   
+   System.out.println(s5.substring(0, 2));//ab
+   String substr = s5.substring(0, 2);
+   //s5's value doesn't change
+   //substr is storing a new String value returned by "substring"
+   System.out.println(substr); //ab
+   System.out.println(s5.substring(0, s5.length()));//abc
+   System.out.println(s5.substring(0,3));
+   System.out.println(s5.substring(1));//bc
   }
 }
