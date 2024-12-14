@@ -1,15 +1,17 @@
-# bc2412
-hello，ray!!!!!
-wellcome to bootcamp!!!
+# Notes
+## Week1
 
-chapter 1 
-git command:
-git add .
-git commit -m "123321testing"
-git push
-git status
+-Data types(8 Primitives)
+ - 6 of them handles numbers
+ - char & boolean
+-operator (++x,x++)
+  -Division(divided by 0)
+  -Math Operator(%,++x,x++,etc)
+  -comparison(>,<,>=,<=,!=,==) -> Primitives,string cannot use
+- String (store zero or many characters)
+  -equals(String),length(),charAt(int),substring()
+-If, else if, else
+-for (int i =0 ;i< 3 ;i++){}
+-for + if(loop all elements + filtering)
+ -Searching (for + if)
 
-
-chapter 2
-
-chapter 3

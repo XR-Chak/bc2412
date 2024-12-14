@@ -128,6 +128,89 @@ public class DemoDataType{
         boolean isAdult = age2>=18;
         System.out.println(isAdult);//true
 
+        char q = 'a';
+        int u = q;// ! char value can be assigned to int ???
+        //char(lower level) -> int (higher level)
+        char q2 = 97;
+        System.out.println(q2);
+        //char q3 = 700000; out of range of the char value
+        char q3 = 48;
+        int u3 = q3;
+        System.out.println(u3);//48
+        char q4 = 65;
+        int u4 = q4;
+        System.out.println(u4);
+        char q5 = 97;
+        System.out.println(q3+" "+q4+" "+q5);
+        char q6 = 10000;
+        System.out.println(q6);
+        char q7 = '你';
+        int u7 = q7;
+        System.out.println(u7);
+
+        //ASCII code (0-127)
+        //a -> 97
+        //48 -> 0 ,65->A ,97 ->a
+
+        //byte -> short -> int -> long -> float-> double
+        // char -> int
+        long l10 = 'a';
+        float f10 = 'a';
+        double d10 = 'a';
+        //byte -> short -> int->long->float->double
+        //char -> int
+
+        //Nested loop
+        for(int i = 0; i<3;i++){
+            for(int j =0; j<4;j++){
+                //System.out.println("*");//print and next line
+                System.out.print("*");
+            }
+            //got to i++
+        }
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println("ExerciseVVVVVVVVV");
+        // step 1:i=0,j=0,print*
+        // step 2:i=0,j=1,print*
+        // step 3:i=0,j=2,print*
+        // step 4:i=0,j=3,print*
+        // step 5:i=1,j=0,print*
+        // step 6:i=1,j=1,print*
+        // step 7:i=1,j=2,print*
+        // step 8:i=1,j=3,print*
+        // step 9:i=2,j=0,print*
+        // step 10:i=2,j=1,print*
+        // step 11:i=2,j=2,print*
+        // step 12:i=2,j=3,print*
+
+        //*
+        //**
+        //***
+        //****
+
+        for(int i=3;i>=0;i--){ //i changes by row changes
+            for(int j=0;j<4-i;j++){// j changes within the row
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+       //   *
+       //  ***
+       // *****
+       //*******
+
+       for(int i =3;i>=0;i--){
+        for(int j=0;j<i ;j++){
+            System.out.print(" ");
+        }
+        for(int k=0;k<7-i*2;k++){
+            System.out.print("*");
+        }
+        System.out.println();
+       }
 
 
     }

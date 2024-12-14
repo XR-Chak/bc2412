@@ -118,5 +118,38 @@ public class DemoForLoop {
     }
     System.out.println(isSubstringExist);//true
 
+    // Counting
+    String s = "hello";
+    //Count the number of 'l'
+    //for + if
+    int count = 0;
+    for(int i = 0; i<s.length();i++){
+      if (s.charAt(i)=='l') {
+        count++;
+      }
+    }
+    System.out.println("the number of 'l' is:"+count);
+    // Test case :"heo","","hello"
+
+    //continue - skip the rest , go to next iteration
+    count = 0;
+    for(int i = 0;i<s.length();i++){
+      if(s.charAt(i)!='l'){
+        continue; // skip count ++, go to i++
+      }
+      count++;
+    }
+    System.out.println("count"+count);
+
+    //1-100 , print out all the number which can be divided by 3 and 4
+    //continue
+    for(int i = 1;i <=100;i++){
+      if(i%3!=0||i%4!=0){
+        continue;
+      }
+      System.out.println(i);
+      // 100 things.... use continue can skip 
+    }
+
   }
 }
