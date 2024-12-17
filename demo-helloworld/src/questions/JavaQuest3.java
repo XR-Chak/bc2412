@@ -84,7 +84,20 @@ public class JavaQuest3 {
     }else if (month==12) {
       monthOfName="December";
       number_Of_DaysInMonth = 31;
+    }//can use switch
+
+    switch (monthOfName) {
+      case 1:
+        
+        break;
+      case 2:
+        if (leapYear) {
+          
+        }
+      default:
+        break;
     }
+
 
     System.out.println(
         monthOfName + " " + year + " has " + number_Of_DaysInMonth + " days");

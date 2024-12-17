@@ -197,29 +197,46 @@ public class DemoArray {
 
         //assume we have small letter only
         char[] arr12 = new char[]{'p','a','p','b','a','p'};
+        char maxChar = ' ';
+        // 
+        int[] counters = new int [26];//default value of a array value is 0!!!!!!!!!!!
+        for(int i=0;i<arr12.length;i++){
+            System.out.println(arr12[i]-'a');
+            counters[arr12[i]-'a']++;// arr12[i] - 'a' -> mean char - char = int!!!!!because used "-"
+
+        }
+        int max2 = Integer.MIN_VALUE;
+        for(int i = 0;i<counters.length;i++){
+            //max2 = Math.max(counters[i], max2);
+            if (counters[i]>max2) {
+                max2 = counters[i];
+                maxChar = (char)(i+97);
+            }
+        }
+
+        System.out.println("max2: "+maxChar);
+        //p-a -> will become ascii code some number -97,the number will within 26.......
         //more than one loop
 
         char maxNumChar='j';
         int maxCount = 0;
-
         
-        for(int i=0;i<arr12.length-1;i++){
-            int count = 0;
-            for(int j =0;j<arr12.length-1;j++){
+        
+        for(int i =0;i<arr12.length;i++){
+            int count =0;
+            for(int j =0;j<arr12.length;j++){
                 if (arr12[i]==arr12[j]) {
                     count++;
                 }
-
                 if (count>maxCount) {
                     maxCount = count;
                     maxNumChar = arr12[i];
                 }
             }
-                
         }
         
 
-        System.out.println(maxNumChar);//p
+        System.out.println("maxNumChar is: "+maxNumChar);//p
 
         //example:
         float[] num1 = new float[4];
