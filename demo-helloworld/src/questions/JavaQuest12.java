@@ -32,8 +32,8 @@ public class JavaQuest12 {
     for(int i=0;i<dataset.length;i++){
       for(int j =i+1;j<dataset.length;j++){
         if (target-dataset[i]==dataset[j]) {
-          a=i;
-          b=j;
+          a=dataset[i];
+          b=dataset[j];
       }
       }
       
