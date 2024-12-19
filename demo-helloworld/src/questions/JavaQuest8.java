@@ -1,5 +1,7 @@
 package questions;
 
+import java.util.Arrays;
+
 public class JavaQuest8 {
   // Write a loop to find the second max number.
   public static void main(String[] args) {
@@ -32,5 +34,8 @@ public class JavaQuest8 {
       }
     }
     System.out.println(secondMax);
+    int[] nums10 = new int[]{1,2,3};
+    String s = Arrays.toString(nums10);
+    System.out.println(s.concat(s));
   }
 }

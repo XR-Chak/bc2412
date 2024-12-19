@@ -103,6 +103,8 @@ public class DemoBigDecimal {
     System.out.println(Math.round(u2));//4
     System.out.println(Math.abs(-9L));//9
     
-    
+    char test = 'a';
+    test = (char)1293;//downcasting will cause run time problem
+    System.out.println(test);
   }
 }

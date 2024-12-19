@@ -62,5 +62,16 @@ public class DemoWrapperClass {
     //long -> Long
     //float ->Float
     
+    //shifting, concept: create a temp to back up data
+    int left = 5;
+    int right = 10;
+    //turn left become right, right become left
+    int temp = left;
+    left = right;
+    right = temp;
+
+    Integer i = 19;
+    
+
   }
 }

@@ -61,7 +61,7 @@ public class DemoWhileLopp {
     Scanner scanner = new Scanner(System.in);
     System.out.println("please pick a number between 1-100 : "+bomb);
     int num = scanner.nextInt();
-    while (num!=bomb) {
+    while (num!=bomb) { //唔知幾時完就用while loop!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       while(num<minNum || num>maxNum){
         System.out.println("Invalid input number");
         num = scanner.nextInt();

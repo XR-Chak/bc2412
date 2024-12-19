@@ -23,13 +23,13 @@ public class DemoString {
     //****
     System.out.println(s.indexOf('e'));//1
     System.out.println(s.indexOf('h'));//0
-    System.out.println(s.indexOf('x'));//-1
+    System.out.println(s.indexOf('x'));//-1,如果找不到會出-1！！！！！！！！！！
     System.out.println(s.indexOf("ll"));//2
     System.out.println(s.lastIndexOf('l'));//3
     System.out.println("hellollo".lastIndexOf("ll"));//5
     System.out.println(s.isEmpty());//false
     System.out.println("".isEmpty());//true
-    System.out.println(" ".isEmpty());//true
+    System.out.println(" ".isEmpty());//false
 
     System.out.println(s.isBlank());//false
     System.out.println("".isBlank());//true
@@ -42,7 +42,30 @@ public class DemoString {
 
     //Chain method
     System.out.println("hello".concat("ijk").concat("def").toUpperCase());//HELLOIJKDEF
-    //charAt() -> Find cahr by index
+    //charAt() -> Find char by index
     //indexOf() -> Find index by char
+
+
+    String test = "asddsa";
+    System.out.println(test.charAt(0));//a
+    System.out.println(test.length());//6
+    System.out.println(test.indexOf("d"));//2
+    System.out.println(test.lastIndexOf("a"));//5
+    System.out.println(test.concat("pp"));//"asddsapp"
+    System.out.println(test.replace("dd", "cc"));//asccsa
+    System.out.println(test.toUpperCase());//"ASDDSA"
+    System.out.println(test.equals("asddsa"));//true
+    System.out.println(test.equalsIgnoreCase("ASDdsA"));//true
+    System.out.println(" asd  asd ".trim());//"asd asd"
+    System.out.println(test.toLowerCase());//"asddsa"
+    System.out.println(test.compareTo("c"));//-2
+    System.out.println(test.contains("d"));//true
+    System.out.println(test.isEmpty());//false
+    System.out.println(test.isBlank());//false
+    System.out.println(test.startsWith("asd"));//true
+    System.out.println(test.endsWith("sa"));//true
+    System.out.println(test.substring(1,5));//sdds
+
+
   }
 }

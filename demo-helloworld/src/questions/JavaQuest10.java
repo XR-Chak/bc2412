@@ -2,7 +2,15 @@ package questions;
 
 import java.util.Arrays;
 import java.util.Scanner;
-
+/**
+ * Input a Index Position: 3
+ * Input a new Value: 120
+ * Original Array : [25, 14, 56, 15, 36, 56, 77, 18, 29, 49]
+ * New Array: [25, 14, 56, 120, 15, 36, 56, 77, 18, 29]
+ */
+// Insert an elements into a specific position of the array
+// The original last element should be removed accordingly
+// if the specified position is the last index, return the original array
 public class JavaQuest10 {
   public static void main(String[] args) {
 
@@ -19,11 +27,24 @@ public class JavaQuest10 {
     System.out.println("Original Array : " + Arrays.toString(my_array));
 
     // code here ...
-    my_array[indexPosition] = newValue;
+    
     int[] newArr = new int[10];
     for(int i=0;i<my_array.length;i++){
-      newArr[i] = my_array[i];
+      newArr[i]=my_array[i];
     }
+    if(indexPosition!=9){
+      for(int i=0;i<my_array.length;i++){// temp array become old array 
+      if(i<indexPosition) {
+        newArr[i]=my_array[i];
+      }
+      else if(i==indexPosition){
+        newArr[i]=newValue;
+      }else if(i>indexPosition){
+        newArr[i] =my_array[i-1];
+      }
+      }
+    }
+    
     System.out.println("New Array: " + Arrays.toString(newArr));
   }
 }

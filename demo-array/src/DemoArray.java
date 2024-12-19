@@ -186,7 +186,7 @@ public class DemoArray {
         //System.out.println(chArr);
         //h -> i,e ->f,l->m,o->p
         //ifmmp
-        chArr = "hello".toCharArray();
+        chArr = "hello".toCharArray(); ///big project will use toCharArray,so that we can do swifting
         int asii = 0;
         char[] chArr2 = new char[4];
         for(int i =0;i<chArr.length;i++){
@@ -242,7 +242,40 @@ public class DemoArray {
         float[] num1 = new float[4];
         num1[0] = 0.8f;
         num1[1] = 1;
+        
+        //
+        int[] arr20 = new int[] {20,-20,90,50,-40};
+        //sorting,without create a new array
+        //move the max value to tail!!!!
+        //step1 :find max ,(90)
+        //[x,x,x,x,90]
+        //[x,x,x,50,90]
+        //[x,x,20,50,90]
+        //[x,-20,20,50,90]
+        //[-40,-20,20,50,90]
+        boolean biggest = false;
+        int temp1 =0;
+        for(int i=0;i<arr20.length;i++){
+            for(int j=i+1;j<arr20.length;j++){
+                if (arr20[i]-arr20[j]>0) {
+                    biggest = true;
+                }else{
+                    biggest = false;
+                }
+            }
+            if (biggest) {
+                temp1 = arr20[arr20.length-1];
+                arr20[arr20.length-1] = arr20[i];
+                arr20[i]=temp1;
+            }
+        }
+        System.out.println("the ans:   "+Arrays.toString(arr20));//[-20,20,50,90]
 
-
+        //modal answer
+        for(int i =0;i<arr20.length-1;i++){
+            for(int j=0;j<arr20.length-i-1;j++){
+                
+            }
+        }
     }
 }
