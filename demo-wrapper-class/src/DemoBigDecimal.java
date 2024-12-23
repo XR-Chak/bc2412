@@ -30,6 +30,8 @@ public class DemoBigDecimal {
     BigDecimal bd7 = BigDecimal.valueOf(0.1);
     BigDecimal bd8 = BigDecimal.valueOf(0.2);
     BigDecimal bd9 = bd7.multiply(bd8);
+    BigDecimal bd100 = bd4.divide(bd7);//0.3/0.1
+    System.out.println("bd100:::::::"+bd100);//3
     System.out.println(bd9);
 
     BigDecimal bd10 = BigDecimal.valueOf(0.3).divide(BigDecimal.valueOf(0.1));
@@ -106,5 +108,6 @@ public class DemoBigDecimal {
     char test = 'a';
     test = (char)1293;//downcasting will cause run time problem
     System.out.println(test);
+
   }
 }

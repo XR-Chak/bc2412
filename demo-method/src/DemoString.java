@@ -10,7 +10,7 @@ public class DemoString {
     System.out.println(s.concat("!!!"));//hello!!! ,s still remain unchange
     System.out.println(s.startsWith("h"));//true
     System.out.println(s.startsWith("ha"));//false
-    System.out.println(s.startsWith("hell"));
+    System.out.println(s.startsWith("hell"));//true
     System.out.println(s.endsWith("lo"));//true
     System.out.println(s.endsWith("oo"));//false
     System.out.println(s.toUpperCase());//HELLO
@@ -45,7 +45,9 @@ public class DemoString {
     //charAt() -> Find char by index
     //indexOf() -> Find index by char
 
-
+    System.out.println("Leetcode".toCharArray());
+    String test1 = String.valueOf("Leetcode".toCharArray());
+    System.out.println("       :"+test1);
     String test = "asddsa";
     System.out.println(test.charAt(0));//a
     System.out.println(test.length());//6

@@ -184,10 +184,10 @@ public class LoopExercise {
       }
     }
     System.out.println("min:"+min+"max:"+max);
-    // 16. Declare a float value (arr16) array with value 0.2, 0.3, 0.5
-    float[] arr16 = new float[]{0.2f,0.3f,0.5f};
+    // 16. Declare a float value (arr16) array with value 0.2, 0.3, 0.6
+    float[] arr16 = new float[]{0.2f,0.3f,0.6f};
     // 17. Add value 0.1 to each of value in array arr16
-    // Print: [0.3, 0.4, 0.6]
+    // Print: [0.3, 0.4, 0.7]
 
     BigDecimal a = BigDecimal.valueOf(0.2f).add(new BigDecimal(0.1));
     BigDecimal b = BigDecimal.valueOf(0.3f).add(new BigDecimal(0.1));
@@ -250,5 +250,38 @@ public class LoopExercise {
       }
     }
     System.out.println("longest="+arr20[idx]);
+
+    /////////
+  // 19. swap the max digit and min digit
+    // Assumption: each digit value appear once in the String
+    // Print: "49280"
+    String ss19 = "40289";
+    char[] arr19 = new char[ss19.length()];
+    for(int i=0;i<ss19.length();i++){
+      arr19[i] = ss19.charAt(i);
+    }
+    //['4','0','2','8','9']
+    int minIndex = -1;
+    int maxIndex = -1;
+    int min19 = Integer.MAX_VALUE;
+    int max19 = Integer.MIN_VALUE;
+    for(int i=0;i<arr19.length;i++){
+      if(arr19[i]>max){
+        max = arr19[i];
+        maxIndex =i;
+      }
+      if (arr19[i]<min) {
+        min = arr19[i];
+        minIndex = i;
+
+      }
+      //swap
+      char temp19 = ' ';
+      temp19 = arr19[maxIndex];
+      arr19[maxIndex] =  arr19[minIndex];
+      arr19[minIndex] = arr19[maxIndex];
+
+    }
+
   }
 }
