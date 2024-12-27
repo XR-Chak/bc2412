@@ -109,5 +109,16 @@ public class DemoBigDecimal {
     test = (char)1293;//downcasting will cause run time problem
     System.out.println(test);
 
+
+    BigDecimal bd = BigDecimal.valueOf(test);
+    System.out.println(bd);
+    //Do a calculation using (3.3/8.8)^3 + 8.7:
+    
+    BigDecimal testing = BigDecimal.valueOf(Math.pow(BigDecimal.valueOf(3.3).divide(BigDecimal.valueOf(8.8)).doubleValue(),3.0));
+    System.out.println(testing);
+
+    BigDecimal testing123 = BigDecimal.valueOf(3.3);
+
+    
   }
 }

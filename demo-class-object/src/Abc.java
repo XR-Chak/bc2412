@@ -3,7 +3,7 @@ public class Abc {
     int x = 3;
     System.out.println(x);
     int[] arr = new int[3];
-
+    //p1,p2,p3  they are just 郵差！！！ point to object
     String person = "vincent";
     int personAge = 18;
 
@@ -36,6 +36,10 @@ public class Abc {
       System.out.println(p.getName() + "," + p.getAge() + "," + p.getEmailAddress());
     }
 
+    //String s2 = p2;
+    //String s3 = new Integer(23);
+
+    
     String s1 = "hello";
     String[] strings = new String[] {s1, "world"};
 

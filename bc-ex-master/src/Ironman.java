@@ -25,7 +25,7 @@ public class Ironman {
 
    //setter
    public void setName(String name){
-        this.name= name;
+        this.name= name; 
    }
 
    public static int sum(int x,int y){
