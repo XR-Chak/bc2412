@@ -69,7 +69,7 @@ public class Customer { // Person "has" name, age
     // orders[1] = new Order();
     // orders[2] = new Order();
 
-    Customer c1 = new Customer(1L);
+    Customer c1 = new Customer(1L);//create customer object and then, write down the "address" into c1
 
     Order o1 = new Order(1L);
     o1.addItem(new Item("ABC", 5.4, 5));
@@ -92,6 +92,15 @@ public class Customer { // Person "has" name, age
     System.out.println(c1.getTotalOrderAmount(1L));
     System.out.println(c1.isVip()); // false
 
-    System.out.println(c1.getOrders()[0].getItems()[1].getPrice());
+    System.out.println(c1.getOrders()[0].getItems()[1].getPrice());//1.3
+    //c1.getOrders -> Order[]
+    //so, getOrder[0] ->Order
+    //so, geOrders[0].getItems() ->Item[]
+    //so,getOrders[0].getItems()[1] -> Item
+    //so, getOrders[0].getItems()[1].getPrice() ->double
+    System.out.println(c1.getOrders()[0].getItems()[1].totalAmount());//3.9(1.3x3)
+    System.out.println(c1.getOrders()[0].totalAmount());//30.9(5.4x5 +1.3x3)
+    System.out.println(c1.getTotalOrderAmount(1));//30.9
+    System.out.println(011L);
   }
 }
