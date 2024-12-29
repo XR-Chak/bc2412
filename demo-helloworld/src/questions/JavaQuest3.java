@@ -86,17 +86,17 @@ public class JavaQuest3 {
       number_Of_DaysInMonth = 31;
     }//can use switch
 
-    switch (monthOfName) {
-      case 1:
+    // switch (monthOfName) {
+    //   case 1:
         
-        break;
-      case 2:
-        if (leapYear) {
+    //     break;
+    //   case 2:
+    //     if (leapYear) {
           
-        }
-      default:
-        break;
-    }
+    //     }
+    //   default:
+    //     break;
+    // }
 
 
     System.out.println(

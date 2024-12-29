@@ -3,6 +3,7 @@ import java.math.BigDecimal;
 public class Customer { // Person "has" name, age
   private long id;
   private Order[] orders;
+  public long test =1;
 
   // 1. Normally Customer can be created without order.
   // public Customer(long id, Order[] orders) {
@@ -102,5 +103,6 @@ public class Customer { // Person "has" name, age
     System.out.println(c1.getOrders()[0].totalAmount());//30.9(5.4x5 +1.3x3)
     System.out.println(c1.getTotalOrderAmount(1));//30.9
     System.out.println(011L);
+
   }
 }

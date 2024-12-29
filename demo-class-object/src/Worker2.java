@@ -20,5 +20,8 @@ public class Worker2 {
     w1.moveIn(100);
     w1.moveOut(23);
     System.out.println(w1.checkStockQuantity());//77
+    Worker w11 = new Worker(null);
+    System.out.println(Worker.getWorkerCount());
+
   }
 }

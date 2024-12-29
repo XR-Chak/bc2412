@@ -36,4 +36,8 @@ public class Item {
         .multiply(BigDecimal.valueOf(this.quantity)) //
         .doubleValue();
   }
+  public static void main(String[] args) {
+    Customer c1 = new Customer(1);
+    System.out.println(c1.test);
+  }
 }
