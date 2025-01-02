@@ -1,7 +1,7 @@
 import java.math.BigDecimal;
 
 public class Item {
-  private String name;
+  private String name;//use private then getter to get the value
   private double price;
   private int quantity;
 
@@ -27,11 +27,11 @@ public class Item {
     return this.name;
   }
 
-  public void setQuantity(int quantity) {
+  public void setQuantity(int quantity) {//can edit,if no setter that mean the object is readable only
     this.quantity = quantity;
   }
 
-  public double totalAmount() {
+  public double totalAmount() {//presentation method
     return BigDecimal.valueOf(this.price) //
         .multiply(BigDecimal.valueOf(this.quantity)) //
         .doubleValue();

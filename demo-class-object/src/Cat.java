@@ -11,6 +11,10 @@ public class Cat {
   }
   public static void main(String[] args) {
     System.out.println(Cat.calculateArea2(3.0));
-    Cat c1 = new Cat();
+    Cat c1 = new Cat();//save it in c1
+    new Cat();//no address save this object,we will lost it
+    Cat c2 = c1;
+    c2.age = 10;
+    System.out.println(c1.age);
   }
 }
