@@ -23,8 +23,11 @@ public class Deck {
       System.out.println(deck.getCards()[i].getSuite()+" "+deck.getCards()[i].getRank());
     }
     System.out.println(Math.PI);//public and static
+    Card card = new Card('A', 'S');
+    Card card2 = new Card('A', 'S');
+    if(card.equals(new Card('A', 'S'))){
 
-
+    }
     //Card.x = 10;//
     //Card.ranks = new char[3];--> the ranks is final variable ,cannot be changed
   }

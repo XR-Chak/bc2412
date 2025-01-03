@@ -41,7 +41,7 @@ public class Teacher {
             this.clearCandy(pos);//teacher's candy bag-1
             //System.out.println("pos="+pos);
             if(++pos >=this.candies.length){
-              return;
+              return;//This return similar to break,it will leave all the loop and stop the method!!!!
             }
         }
         

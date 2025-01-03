@@ -16,4 +16,8 @@ public class Animal {
   public String getName(){//cat & dog can use this public method
     return this.name;
   }
+
+  public void eat(){
+    System.out.println("Animal is eating ...");
+  }
 }

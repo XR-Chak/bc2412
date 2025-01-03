@@ -10,10 +10,10 @@ public class Cat {
     return area;//double
   }
   public static void main(String[] args) {
-    System.out.println(Cat.calculateArea2(3.0));
-    Cat c1 = new Cat();//save it in c1
-    new Cat();//no address save this object,we will lost it
-    Cat c2 = c1;
+    System.out.println(Cat1.calculateArea2(3.0));
+    Cat1 c1 = new Cat1();//save it in c1
+    new Cat1();//no address save this object,we will lost it
+    Cat1 c2 = c1;
     c2.age = 10;
     System.out.println(c1.age);
   }
