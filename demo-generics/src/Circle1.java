@@ -6,9 +6,8 @@ public class Circle1 extends Shape{//Parent class :color
   private double radius ;
 
   //If you don't specify the constructor ,implicitly you have an empty constructor
-  public Circle1(Color color,double radius){
+  public Circle1(double radius){
     //If you don't specify super() here ,by default implicitly you are calling super()
-    super(color);
     //super(color);//because  you have "extends",you have to "super"
     this.radius = radius;
   }
@@ -26,21 +25,20 @@ public class Circle1 extends Shape{//Parent class :color
       return false;
     }
     Circle1 circle = (Circle1) obj;//from parent class to child class (int x = (int) 10L) downcast
-    return Objects.equals(circle.getColor(),super.getColor())
-    && Objects.equals(circle.getRadius(),this.getRadius());
+    return Objects.equals(circle.getRadius(),this.getRadius());
   }
 
   //Implicitly extend Object.class (Object.hashCode() -> check if they are same memory object)
   @Override
   public int hashCode(){
-    return Objects.hash(this.radius,super.getColor());//hash -> generate a new int number representing the object
+    return Objects.hash(this.radius);//hash -> generate a new int number representing the object
   }
 
   @Override
   public String toString(){
     return "Circle["//
     + "radius=" + this.getRadius() //
-    + ", color="+ super.getColor()+"]";
+    +"]";
   }
 
   //area() return double
@@ -53,8 +51,8 @@ public class Circle1 extends Shape{//Parent class :color
     .doubleValue();
   }
   public static void main(String[] args) {
-    Circle1 c1 = new Circle1(Color.YELLOW, 3.0);
-    Circle1 c2 = new Circle1(Color.RED, 3.0);
+    Circle1 c1 = new Circle1( 3.0);
+    Circle1 c2 = new Circle1(3.0);
     System.out.println(c1.equals(c2));
     System.out.println(c1.hashCode());
     System.out.println(c2.hashCode());

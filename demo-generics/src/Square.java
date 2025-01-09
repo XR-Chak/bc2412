@@ -4,8 +4,7 @@ import java.util.Objects;
 public class Square extends Shape{
   private double side;
 
-  public Square(Color color,double side){
-    super(color);
+  public Square(double side){
     this.side = side;
   }
 
@@ -17,18 +16,17 @@ public class Square extends Shape{
       return false;
     }
     Square square = (Square) obj;
-    return Objects.equals(this.side,square.side) &&
-    Objects.equals(this.getColor(),square.getColor());
+    return Objects.equals(this.side,square.side);
   }
 
 @Override
 public int hashCode(){
-  return Objects.hash(this.side,this.getColor());
+  return Objects.hash(this.side);
 }
 
 @Override
 public String toString(){
-  return " the side is :"+this.side+" "+" the color is:"+super.getColor();
+  return " the side is :"+this.side;
 }
   public double area(){
     return BigDecimal.valueOf(side)
@@ -39,8 +37,8 @@ public String toString(){
     return this.side;
   }
   public static void main(String[] args) {
-    Square s1 = new Square(Color.BLUE, 3);
-    Square s2 = new Square(Color.BLUE, 3);
+    Square s1 = new Square( 3);
+    Square s2 = new Square(3);
     System.out.println(s1.hashCode());
     System.out.println(s2.hashCode());
     System.out.println(s1.equals(s2));

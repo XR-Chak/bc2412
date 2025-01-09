@@ -1,3 +1,5 @@
-public abstract class Role {
-  
+public enum Role {
+  ARCHER,
+  WARRIOR,
+  MAGE;
 }

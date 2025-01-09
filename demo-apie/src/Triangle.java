@@ -5,7 +5,7 @@ public class Triangle extends Shape{
   private double base;
   private double height;
 
-  public Triangle(double base,double height,String color){
+  public Triangle(double base,double height,Color color){
     super(color);
     this.base = base;
     this.height = height;
@@ -38,12 +38,14 @@ public class Triangle extends Shape{
     .multiply(BigDecimal.valueOf(height))
     .divide(BigDecimal.valueOf(2.0)).doubleValue();
   }
+
+
   public static void main(String[] args) {
-    Circle1 c1 = new Circle1("asd",3.2);
+    Circle1 c1 = new Circle1(Color.BLUE,3.2);
     System.out.println(c1.area());
-    Square s1 = new Square("white",4.4);
+    Square s1 = new Square(Color.BLUE,4.4);
     System.out.println(s1.area());
-    Triangle t1 = new Triangle(4.4, 4.5, "black");
+    Triangle t1 = new Triangle(4.4, 4.5,Color.BLUE);
     System.out.println(t1.area());
   }
 }
