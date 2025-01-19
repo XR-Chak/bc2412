@@ -139,6 +139,11 @@ public class ArrayListExercise {
       a5.add(h6.toArray()[i]);
     }
     System.out.println(a5);
+
+ 
+
+    System.out.println("asdasdasdasdasdasd:"+testing);
+
     // Exercise 8: ArrayList of Students
     // 8a. Create an ArrayList to store Student objects.
     // Add the following students:
@@ -196,16 +201,7 @@ public class ArrayListExercise {
       }
     }
    }
-
-
-
   }
- 
-
-
-
-
-
 
   public static class Student {
     private int id;

@@ -14,9 +14,14 @@ public class Archer extends Hero{
   private double CC = 0.3;//Critical chance
   private double CDM = 1.4;//Critical damage multiplyer
   private double CD = BigDecimal.valueOf(this.PA).multiply(BigDecimal.valueOf(CDM)).doubleValue();//Critical damage
-  
+  private Weapon weapon = null;
+
   public Archer(int id,String name){
     super(id, name);
+  }
+
+  public Role getRole(){
+    return this.role;
   }
 
   public int getMaxHp(){
@@ -50,8 +55,45 @@ public class Archer extends Hero{
       System.out.println("Already max out level!!!");
     }
   }
-
-  
+  @Override
+  public boolean equipWeapon(Weapon weapon){
+    if (this.weapon==null && weapon.getWeaponType()==WeaponType.BOW) {
+      this.weapon = weapon;
+      System.out.println("Equiped!");
+      return true;
+    }else if (this.weapon==null && weapon.getWeaponType()!=WeaponType.BOW) {
+      System.out.println("Archer can only equip bow");
+      return false;
+    }
+    System.out.println("Already have weapon...");
+    return false;
+    
+  }
+  @Override
+  public boolean removeWeapon(){
+    if (this.weapon==null) {
+      System.out.println("You don't have weapon..");
+      return false;
+    }else{
+      this.weapon=null;
+      System.out.println("removed weapon!");
+      return true;
+    }
+  }
+  @Override
+  public boolean changeWeapon(Weapon weapon){
+    if (this.weapon!=null && this.weapon==weapon) {
+      System.out.println("They are the same weapon");
+      return false;
+    }else if (this.weapon!=null && this.weapon.getWeaponType()==WeaponType.BOW) {
+      this.weapon = weapon;
+      System.out.println("Weapon changed!");
+      
+      return true;
+    }
+    System.out.println("You don't have weapon ,cannot use this method");
+    return false;
+  }
 
   public static void main(String[] args) {
     Archer a1 = new Archer(1,"asd");

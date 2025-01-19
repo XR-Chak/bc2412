@@ -5,7 +5,7 @@ public class Printer {
   }
 
   public String print(){
-    return "this is "+ this.x;//String + int => String ,int +double => double!!!
+    return "this is "+ this.x;//String + int => String ,int + double => double!!!
   }
   public static void main(String[] args) {
     Printer p1 = new Printer(10);
