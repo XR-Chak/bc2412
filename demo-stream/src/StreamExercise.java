@@ -265,8 +265,9 @@ public class StreamExercise {
     
     List<String> languages = Arrays.asList("Java", "Python", "Rust", "R", "Go");
     // Output: "Java, Python, Rust, R, Go"
-    String languagesString = languages.stream().reduce((a,b)->a+", "+b).toString();
-    System.out.println(languagesString);///////////////////////////////////////Optional[Java, Python, Rust, R, Go]
+    Optional<String> languagesString = languages.stream().reduce((a,b)->a+", "+b);
+    
+    System.out.println(languagesString.get());//[Java, Python, Rust, R, Go]
     
     
     // 22. Find First and Any
@@ -332,6 +333,11 @@ public class StreamExercise {
     // Output: 28
 
     //Aggregate function max(),min(),average(),sum()
+    List<Integer> asd = new ArrayList<>();
+    System.out.println("asdasdasdasdasdasdasdasdasdasdasdasdas"+"asd".indexOf('a'));
+  
+    Optional<String> testing = Optional.ofNullable(null);
+    System.out.println(testing.orElse("hhh"));
   }
 
   public static class Student {

@@ -25,12 +25,17 @@ public class DemoList {
     // strings3.add("XYZ");
     // strings3.remove("IJK");
     strings3.set(0,"asddasd");
-
+    strings3.get(0);
+    //strings3.add("aaa"); <-----It will have error!!!!!!!!!1
+    
+    
     //3. List.of()
     //Able to read ONLY
     List<String> strings4 = List.of("ABC","DEF","IJK");
     System.out.println(strings4.get(2));
     
-
+    List<Integer> ans4 = List.of(2, 2, 2, 2, 2, 2, 2, 2, 2, 2);
+    //ans4.add(1); <-------error!!!!!!
+    System.out.println(ans4);
   }
 }
