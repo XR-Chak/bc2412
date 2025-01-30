@@ -19,5 +19,9 @@ public record Book(String name,double price) {
     //no setter(immutable)
     //Support equals() and hashcode()
     //Support toString()
+    //Support static method/variable
+    //Support custom instance method
+    //Do not support custom attribute
+    //Do not support custom constructor
   }
 }

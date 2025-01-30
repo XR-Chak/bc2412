@@ -1,5 +1,6 @@
-public class App {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-    }
+package furniture;
+
+public abstract class Chair extends Furniture {
+  abstract boolean hasLegs();
+  abstract boolean sitOn();
 }

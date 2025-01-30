@@ -23,5 +23,9 @@ public class DemoThread {
         //main thread proceed its own task
         System.out.println(sb.length());//0(likely),executed by WorkerA(main thread)
         System.out.println("Program end.");
+        System.out.println("ab".contains("a"));
+        System.out.println("a".charAt(1));
+        char x1 ='a';
+        //System.out.println((String) x); -->cannot do it!!!! cant cast from char to string!!!!
     }
 }
