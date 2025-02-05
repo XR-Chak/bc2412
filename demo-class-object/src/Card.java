@@ -6,8 +6,8 @@ public class Card {
   //final: cannot be modified after initialization
   //static final -> constant
   //Constant naming convention --> should be big letter e.g. PI
-  // public static final char[] RANKS = new char[]{'A','2','3','4','5','6','7','8','9','T','J','Q','K'};
-  // public static final char[] SUITES = new char[]{'D','C','H','S'};
+  public static final Rank[] RANKS = new Rank[]{Rank.A,Rank.TWO,Rank.THREE,Rank.FOUR,Rank.FIVE,Rank.SIX,Rank.SEVEN,Rank.EIGHT,Rank.NINE,Rank.TEN,Rank.J,Rank.Q,Rank.K};
+  public static final char[] SUITES = new char[]{'D','C','H','S'};
   
   public static final int x =3;
 
@@ -27,7 +27,7 @@ public class Card {
   public int[] getSuiteRank(){
     int[] summary = new int[2];
     summary[0] = this.getSuite().getOrder();
-    summary[1] = this.getRank().getOrder();
+    summary[1] = this.getRank().getValue();
     return summary;
   }
 
@@ -37,9 +37,9 @@ public class Card {
   }
 
   public String compareCard(Card card){
-    if (this.getRank().getOrder()>card.getRank().getOrder()) {
+    if (this.getRank().getValue()>card.getRank().getValue()) {
       return this.toString();
-    }else if(this.getRank().getOrder()==card.getRank().getOrder()){
+    }else if(this.getRank().getValue()==card.getRank().getValue()){
       if(this.getSuite().getOrder()>card.getSuite().getOrder()){
         return this.toString();
       }
